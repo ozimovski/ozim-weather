@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --header-bg-color: #e86e1e;
+}
+
+body {
+  max-width: 1140px;
+  margin: auto;
+}

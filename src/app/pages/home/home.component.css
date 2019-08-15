@@ -1,0 +1,23 @@
+.resizableContent {
+  border: 1px solid;
+  padding: 16px;
+}
+
+.timeContainer {
+  background-color: yellow;
+  color: var(--header-bg-color);
+}
+
+.forecastContainer {
+  display: flex;
+}
+
+.currentWeatherContainer {
+  width: 50%;
+  background-color: blue;
+}
+
+.fiveDayWeatherContainer {
+  width: 50%;
+  background-color: green;
+}
