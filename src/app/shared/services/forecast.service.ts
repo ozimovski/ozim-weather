@@ -1,4 +1,4 @@
-import { Response } from './../interfaces/response.interface';
+import { ForecastResponse, CurrentWeatherResponse } from './../interfaces/response.interface';
 import { Observable } from 'rxjs/internal/Observable';
 import { Injectable } from '@angular/core';
 // services
@@ -11,9 +11,15 @@ import { HttpClientService } from './http-client.service';
 export class ForecastService {
   constructor(private httpClient: HttpClientService, private helper: HelperService) {}
 
-  public getForecast(city: string): Observable<Response> {
+  public getCurrentWeather(city: string): Observable<CurrentWeatherResponse> {
     return this.httpClient.get(
-      this.helper.getForecastUrl() + `?q=${city}&units=metric&appid=770d774e60db68397302f1068583ff79`
+      this.helper.getForecastUrl() + `/weather/?q=${city}&units=metric${this.helper.getApiKey()}`
+    );
+  }
+
+  public getForecast(city: string): Observable<ForecastResponse> {
+    return this.httpClient.get(
+      this.helper.getForecastUrl() + `/forecast/?q=${city}&units=metric${this.helper.getApiKey()}`
     );
   }
 }

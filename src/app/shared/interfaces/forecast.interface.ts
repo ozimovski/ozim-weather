@@ -4,6 +4,7 @@ export interface Main {
   temp: number;
   temp_min: number;
   temp_max: number;
+  humidity: number;
 }
 
 export interface Weather {
@@ -16,5 +17,5 @@ export interface Weather {
 export interface List {
   dt: number;
   main: Main;
-  weather: Weather;
+  weather: Weather[];
 }

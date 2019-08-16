@@ -1,0 +1,9 @@
+.forecastItemContainer {
+  display: flex;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.itemContainer {
+  margin-right: 20px;
+}

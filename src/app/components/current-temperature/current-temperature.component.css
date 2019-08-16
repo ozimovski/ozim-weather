@@ -1,0 +1,16 @@
+.currentTemperatureContainer {
+  text-align: center;
+}
+
+.currentTemperatureContainer img {
+  display: block;
+  margin: auto;
+}
+
+.currentWeatherOtherData {
+  margin-top: 20px;
+}
+
+.currentWeatherOtherData span {
+  display: block;
+}

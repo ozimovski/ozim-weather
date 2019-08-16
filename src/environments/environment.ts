@@ -4,10 +4,11 @@
 
 export const environment = {
   production: false,
+  apiKey: '&appid=770d774e60db68397302f1068583ff79',
   forecast: {
     protocol: 'http://',
     rootUrl: 'api.openweathermap.org',
-    apiUrl: '/data/2.5/forecast'
+    apiUrl: '/data/2.5'
   }
 };
 
