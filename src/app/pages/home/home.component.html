@@ -1,8 +1,12 @@
 <div *ngIf="isLoading === false; else loaderDiv" class="resizableContent">
   <div class="timeContainer">
     <p>{{ city }}</p>
-    <p>Pridobljeno {{ dataReceived | date: 'dd. MM. yyyy HH:mm' }}</p>
-    <p><button (click)="refreshForecast()" class="refreshButton">Osveži</button></p>
+    <span class="flag-icon flag-icon-gb" (click)="setLanguage('en')"></span
+    ><span class="flag-icon flag-icon-si" (click)="setLanguage('si')"></span>
+    <p translate>
+      DATARECEIVED <span>{{ dataReceived | date: 'dd. MM. yyyy HH:mm' }}</span>
+    </p>
+    <p><button (click)="refreshForecast()" class="refreshButton" translate>REFRESH</button></p>
   </div>
   <div class="forecastContainer">
     <div class="currentWeatherContainer">
@@ -15,7 +19,7 @@
 </div>
 <ng-template #loaderDiv>
   <div class="loaderContainer">
-    <p>Pridobivam podatke ...</p>
+    <p translate>RECEIVINGDATA</p>
     <div class="loading"></div>
   </div>
 </ng-template>

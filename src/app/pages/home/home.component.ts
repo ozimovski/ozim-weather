@@ -2,6 +2,7 @@ import { ForecastResponse, CurrentWeatherResponse } from './../../shared/interfa
 import { ForecastService } from './../../shared/services/forecast.service';
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   public forecastData: ForecastResponse;
   public dataReceived: string;
   public isLoading = true;
-  constructor(private forecastService: ForecastService) {}
+  constructor(private forecastService: ForecastService, private translate: TranslateService) {}
 
   ngOnInit() {
     this.getWeatherData();
@@ -37,6 +38,12 @@ export class HomeComponent implements OnInit {
 
   public refreshForecast(): void {
     this.isLoading = true;
+    this.getWeatherData();
+  }
+
+  setLanguage(lang: string): void {
+    this.isLoading = true;
+    this.translate.use(lang);
     this.getWeatherData();
   }
 }
