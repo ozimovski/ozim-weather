@@ -1,5 +1,3 @@
-import { City } from './city.interface';
-
 export interface Main {
   temp: number;
   temp_min: number;

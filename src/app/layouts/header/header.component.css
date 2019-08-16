@@ -10,6 +10,7 @@
 
 .header span {
   vertical-align: middle;
+  color: #fff;
 }
 
 @media screen and (min-width: 768px) {

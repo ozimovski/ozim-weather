@@ -12,8 +12,4 @@ export class CurrentTemperatureComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-
-  public test() {
-    console.log(this.weather);
-  }
 }

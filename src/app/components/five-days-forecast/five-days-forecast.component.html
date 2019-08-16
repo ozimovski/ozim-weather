@@ -2,8 +2,6 @@
   <div class="itemContainer" *ngFor="let item of forecast.list">
     <div>{{ item.dt | unixToIsodate }}</div>
     <div><img src="{{ item.weather[0].icon | iconUrlPipe }}" alt="" title="{{ item.weather[0].description }}" /></div>
-    <div>
-      {{ item.main.temp }}
-    </div>
+    <small>{{ item.main.temp }} °C</small>
   </div>
 </div>

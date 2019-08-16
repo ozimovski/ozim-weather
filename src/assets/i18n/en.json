@@ -1,6 +1,6 @@
 {
   "FIXHEADER": "Fixed Hola Header",
-  "DATARECEIVED": "Data received",
+  "DATARECEIVED": "Data received from",
   "REFRESH": "Refresh",
   "RECEIVINGDATA": "Receiving data ...",
   "HUMIDITY": "Humidity "
