@@ -1,6 +1,9 @@
 .resizableContent {
+  background-color: var(--bg-color);
   border: 1px solid;
   padding: 16px;
+  overflow-y: auto;
+  margin-top: 44px;
 }
 
 .timeContainer {
@@ -13,13 +16,13 @@
 }
 
 .currentWeatherContainer {
+  border: 1px solid;
   width: 50%;
-  background-color: blue;
 }
 
 .fiveDayWeatherContainer {
+  border: 1px solid;
   width: 50%;
-  background-color: green;
 }
 
 .loaderContainer p {
@@ -41,4 +44,28 @@
 
 .flag-icon {
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .resizableContent {
+    margin-top: 56px;
+    padding: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 320px) {
+  .currentWeatherContainer {
+    width: 100%;
+  }
+
+  .fiveDayWeatherContainer {
+    width: 100%;
+  }
+
+  .forecastContainer {
+    display: block;
+  }
 }
